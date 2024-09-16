@@ -2,7 +2,7 @@
  *
  *
  */
-// Lab 1 - Exercise A
+// ENSF 480 - Lab 2 - Exercise A
 #include "mystring_B.h"
 #include <string.h>
 #include <iostream>
@@ -121,26 +121,11 @@ Mystring& Mystring::append(const Mystring& other)
     strcpy(charsM, s);
 }
 
-int Mystring::isNotEqual (const Mystring& s)const
-{
-  return (strcmp(charsM, s.charsM)!= 0);
-}
-
 int Mystring::isEqual (const Mystring& s)const
 {
   return (strcmp(charsM, s.charsM)== 0);
 }
 
-
-int Mystring::isGreaterThan (const Mystring& s)const
-{
-  return (strcmp(charsM, s.charsM)> 0);
-}
-
-int Mystring::isLessThan (const Mystring& s)const
-{
-  return (strcmp(charsM, s.charsM)< 0);
-}
 
 void Mystring::memory_check(char* s)
 {

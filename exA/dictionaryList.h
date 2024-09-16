@@ -1,5 +1,5 @@
 // dictionaryList.h
-// Lab 1 - Exercise A
+// ENSF 480 - Lab 2 - Exercise A
 
 #ifndef DICTIONARY_H
 #define DICTIONARY_H

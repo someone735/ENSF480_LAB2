@@ -2,7 +2,7 @@
  *
  *
  */
-// Lab 1- Exercise A
+// ENSF 480 - Lab 2 - Exercise A
 #include <iostream>
 #include <string>
 using namespace std;
@@ -66,21 +66,12 @@ public:
   //          Othrewise, extends the size of the charsM to s.lengthM+1, and copies 
   //          s into the charsM.
     
-  int isGreaterThan( const Mystring& s)const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is greater than s.charsM.
-
-  int isLessThan (const Mystring& s)const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is less than s.charsM.
+  
 
   int isEqual (const Mystring& s)const;
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM equal s.charsM.
 
-  int isNotEqual(const Mystring& s)const;
-  // REQUIRES: s refers to an object of class Mystring
-  // PROMISES: retruns true if charsM is not equal s.charsM.
 
  private:
 

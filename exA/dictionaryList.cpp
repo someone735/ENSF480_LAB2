@@ -1,8 +1,8 @@
 // lookuptable.cpp
 
-// Lab 1 - Exercise A
+// ENSF 480 - Lab 2 - Exercise A
  
-// Completed by: John Tumacder
+// Completed by:
 
 #include <assert.h>
 #include <iostream>
@@ -168,54 +168,26 @@ void DictionaryList::make_empty()
 
 void DictionaryList::find(const Key& keyA)
 {
-  //key == int 
-  //datum == string
-  // cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
-  // cout << "... so exit is being called.\n";
-  
-  Node* temp = this ->  headM;
-  int found = 0;
-  while (temp != 0){
-    if (temp ->keyM == keyA){
-      cursorM = temp;
-      found = 1;
-      break;
-    } 
-      temp = temp ->nextM;
-  }
-  if (!found){
-    cursorM = 0;
-  }
+  cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
+  cout << "... so exit is being called.\n";
+  exit(1);
 }
 
 
 void DictionaryList::destroy()
 {
-  // cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
-  //      << "when it should be deleting them!\n";
-  go_to_first();
-  while(cursorM != 0){
-    Node* temp = cursorM;
-    cursorM = cursorM->nextM;
-    remove(temp->keyM);
-  }
-
+  cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
+       << "when it should be deleting them!\n";
+  headM = 0;
 }
 
 
 void DictionaryList::copy(const DictionaryList& source)
 {
-  headM = 0;
-  this->sizeM = source.sizeM;
-  for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
-    this -> insert(temp -> keyM, temp -> datumM);
-  }
-  if (source.cursorM != 0 ){
-    find(source.cursorM -> keyM);
-  } else {
-    this -> cursorM = 0;
-  }
   
+  cout << "\nDictionaryList::copy is not implemented properly,\n"
+       << "so the program is calling exit.\n";
+  exit(1);
 }
 
 
