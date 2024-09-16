@@ -153,7 +153,7 @@ void test_finding(DictionaryList& dl)
     
     cout << "***----Finished tests of finding -------------------------***\n\n";
 }
-#if 0
+#if 1
 void test_operator_overloading(DictionaryList& dl)
 {
 

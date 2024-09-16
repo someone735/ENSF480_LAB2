@@ -168,26 +168,64 @@ void DictionaryList::make_empty()
 
 void DictionaryList::find(const Key& keyA)
 {
-  cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
-  cout << "... so exit is being called.\n";
-  exit(1);
+  //key == int 
+  //datum == string
+  // cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
+  // cout << "... so exit is being called.\n";
+  
+  Node* temp = this ->  headM;
+  int found = 0;
+  while (temp != 0){
+    if (temp ->keyM == keyA){
+      cursorM = temp;
+      found = 1;
+      break;
+    } 
+      temp = temp ->nextM;
+  }
+  if (!found){
+    cursorM = 0;
+  }
 }
 
 
 void DictionaryList::destroy()
 {
-  cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
-       << "when it should be deleting them!\n";
-  headM = 0;
+  // cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
+  //      << "when it should be deleting them!\n";
+  go_to_first();
+  while(cursorM != 0){
+    Node* temp = cursorM;
+    cursorM = cursorM->nextM;
+    remove(temp->keyM);
+  }
+
 }
 
 
 void DictionaryList::copy(const DictionaryList& source)
 {
+  headM = 0;
+  this->sizeM = source.sizeM;
+  for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
+    this -> insert(temp -> keyM, temp -> datumM);
+  }
+  if (source.cursorM != 0 ){
+    find(source.cursorM -> keyM);
+  } else {
+    this -> cursorM = 0;
+  }
   
-  cout << "\nDictionaryList::copy is not implemented properly,\n"
-       << "so the program is calling exit.\n";
-  exit(1);
 }
 
+bool operator >= (const DictionaryList& c1, const DictionaryList& c2){
+  int len = (c1.cursor_datum().length() >= c2.cursor_datum().length() ? c1.cursor_datum().length() : c2.cursor_datum().length());
+  for (int i = 0; i < len; i++){
+    if (c1.cursor_datum().get_char(i) >= c2.cursor_datum().get_char(i)){
+      
+    }
+  }
+  
+  c1.cursor_datum().get_char() >= c2.cursor_datum().get_char();
+}
 
