@@ -1,5 +1,5 @@
 // exBmain.cpp
-// Lab 1 - Exercise A
+// ENSF 480 - Lab 2 - Exercise A
 #include <assert.h>
 #include <iostream>
 #include "dictionaryList.h"
@@ -20,10 +20,10 @@ int main()
 {
   DictionaryList dl = dictionary_tests();
  
-   test_copying();
+  test_copying();
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
- test_finding(dl);
+ // test_finding(dl);
  // test_operator_overloading(dl);
   
   return 0;
@@ -70,7 +70,7 @@ DictionaryList dictionary_tests()
 
 void test_copying()
 {
-    DictionaryList one;
+   DictionaryList one;
 
   // Copy an empty list.
   DictionaryList two;
