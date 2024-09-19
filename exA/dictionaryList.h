@@ -99,7 +99,7 @@ public:
 
   void make_empty();
   // PROMISES: size() == 0.
-
+  Mystring operator [] (const int index) const;
 private:
   int sizeM;
   Node *headM;

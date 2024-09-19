@@ -79,6 +79,8 @@ public:
   bool operator > (const Mystring& c1) const;
   bool operator == (const Mystring& c1) const;
 
+  char& operator [] (const int index) const;
+  
   friend ostream& operator << (ostream& out, const Mystring& str);
 
 

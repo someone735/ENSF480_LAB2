@@ -218,4 +218,17 @@ void DictionaryList::copy(const DictionaryList& source)
   
 }
 
-
+Mystring DictionaryList::operator [] (const int index) const{
+  if (index == 0){
+    return this->cursor_datum();
+  } else {
+    Node* temp = this->headM;
+    while (temp->nextM != nullptr){
+      if (index == 0){
+        return temp->datumM;
+      } else {
+        temp = temp ->nextM;
+      }
+    }
+  return "0";
+}

@@ -175,6 +175,11 @@ bool Mystring::operator == (const Mystring& c1) const{
   bool result = (comp = 0) ? true : false;
   return result;
 }
+char& Mystring::operator [] (const int index) const{
+  return charsM[index];
+}
+
+
 
 
 
