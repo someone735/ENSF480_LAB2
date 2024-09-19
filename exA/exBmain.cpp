@@ -24,7 +24,7 @@ int main()
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
  // test_finding(dl);
- // test_operator_overloading(dl);
+ test_operator_overloading(dl);
   
   return 0;
 }
@@ -153,7 +153,6 @@ void test_finding(DictionaryList& dl)
     
     cout << "***----Finished tests of finding -------------------------***\n\n";
 }
-#if 1
 void test_operator_overloading(DictionaryList& dl)
 {
 
@@ -170,6 +169,7 @@ void test_operator_overloading(DictionaryList& dl)
     else
        cout << endl << dl2.cursor_datum() << " is greater than " << dl.cursor_datum();
     
+// #if 1
     // Needs to overload <= for Mystring
     if(dl.cursor_datum() <= (dl2.cursor_datum()))
         cout << dl.cursor_datum() << " is less than or equal" << dl2.cursor_datum();
@@ -196,7 +196,7 @@ void test_operator_overloading(DictionaryList& dl)
     else
         cout << endl << dl.cursor_datum() << " is not equal to " << dl2.cursor_datum();
    cout << endl << "\nUsing square bracket [] to access elements of Mystring objects. ";
-
+#if 0
     char c = dl.cursor_datum()[1];
     cout << endl << "The socond element of "  << dl.cursor_datum() << " is: " << c;
     
@@ -242,5 +242,5 @@ void test_operator_overloading(DictionaryList& dl)
     cout << dl2[0][4] << endl;
     
     cout << "\n\n***----Finished tests for overloading operators ----------***\n\n";
+    #endif
 }
-#endif

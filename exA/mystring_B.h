@@ -73,6 +73,15 @@ public:
   // PROMISES: retruns true if charsM equal s.charsM.
 
   bool operator >= (const Mystring& c1) const;
+  bool operator <= (const Mystring& c1) const;
+  bool operator != (const Mystring& c1) const;
+  bool operator < (const Mystring& c1) const;
+  bool operator > (const Mystring& c1) const;
+  bool operator == (const Mystring& c1) const;
+
+  friend ostream& operator << (ostream& out, const Mystring& str);
+
+
 
  private:
 

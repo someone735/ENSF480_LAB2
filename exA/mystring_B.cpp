@@ -8,6 +8,11 @@
 #include <iostream>
 using namespace std;
 
+ostream& operator << (ostream& out, const Mystring& str) {
+  return out << str.charsM;
+}
+
+
 Mystring::Mystring()
 { 
   charsM = new char[1];
@@ -141,13 +146,35 @@ bool Mystring::operator >= (const Mystring& c1) const{
   return result;
 }
 
+bool Mystring::operator <= (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp<=0) ? true : false;
+  return result;
+}
 
+bool Mystring::operator != (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp!=0) ? true : false;
+  return result;
+}
 
+bool Mystring::operator < (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp<0) ? true : false;
+  return result;
+}
 
+bool Mystring::operator > (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp>0) ? true : false;
+  return result;
+}
 
-
-
-
+bool Mystring::operator == (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp = 0) ? true : false;
+  return result;
+}
 
 
 
