@@ -218,7 +218,8 @@ void DictionaryList::copy(const DictionaryList& source)
   
 }
 
-Mystring DictionaryList::operator [] (const int index) const{
+Mystring DictionaryList::operator [] (const int index) const
+{
   if (index == 0){
     return this->cursor_datum();
   } else {
@@ -231,4 +232,17 @@ Mystring DictionaryList::operator [] (const int index) const{
       }
     }
   return "0";
+}
+}
+
+ostream& operator << (ostream& out, const DictionaryList& in) {
+  Node* temp = in.headM;
+  for (int i = 0; i < in.sizeM; i++)
+  {
+    int outInt = in.cursor_key();
+    Mystring outStr = in.cursor_datum();
+    cout << in.cursor_key() << "  " <<in.cursor_datum();
+    
+  }
+  
 }

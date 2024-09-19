@@ -8,11 +8,6 @@
 #include <iostream>
 using namespace std;
 
-ostream& operator << (ostream& out, const Mystring& str) {
-  return out << str.charsM;
-}
-
-
 Mystring::Mystring()
 { 
   charsM = new char[1];
@@ -175,6 +170,11 @@ bool Mystring::operator == (const Mystring& c1) const{
   bool result = (comp = 0) ? true : false;
   return result;
 }
+
+ostream& operator << (ostream& out, const Mystring& str) {
+  return out << str.charsM;
+}
+
 char& Mystring::operator [] (const int index) const{
   return charsM[index];
 }

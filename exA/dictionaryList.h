@@ -100,6 +100,7 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
   Mystring operator [] (const int index) const;
+  friend ostream& operator << (ostream& out, const DictionaryList& in);
 private:
   int sizeM;
   Node *headM;
