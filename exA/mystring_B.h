@@ -72,6 +72,7 @@ public:
   // REQUIRES: s refers to an object of class Mystring
   // PROMISES: retruns true if charsM equal s.charsM.
 
+  bool operator >= (const Mystring& c1) const;
 
  private:
 

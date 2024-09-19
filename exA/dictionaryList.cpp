@@ -218,14 +218,4 @@ void DictionaryList::copy(const DictionaryList& source)
   
 }
 
-bool operator >= (const DictionaryList& c1, const DictionaryList& c2){
-  int len = (c1.cursor_datum().length() >= c2.cursor_datum().length() ? c1.cursor_datum().length() : c2.cursor_datum().length());
-  for (int i = 0; i < len; i++){
-    if (c1.cursor_datum().get_char(i) >= c2.cursor_datum().get_char(i)){
-      
-    }
-  }
-  
-  c1.cursor_datum().get_char() >= c2.cursor_datum().get_char();
-}
 

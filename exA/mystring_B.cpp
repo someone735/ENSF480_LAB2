@@ -135,6 +135,12 @@ void Mystring::memory_check(char* s)
       exit(1);
     }
 }
+bool Mystring::operator >= (const Mystring& c1) const{
+  int comp = strcmp(this->charsM, c1.charsM);
+  bool result = (comp>=0) ? true : false;
+  return result;
+}
+
 
 
 
