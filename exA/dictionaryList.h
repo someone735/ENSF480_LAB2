@@ -29,9 +29,10 @@ typedef Mystring Datum;
 //    Data members of Node are private, and class DictionaryList
 //    is declared as a friend. For details on the friend keyword refer to your
 //    lecture notes.
-
+class DictionaryList;
 class Node {
   friend class DictionaryList;
+  friend ostream& operator << (ostream& out, const DictionaryList& diList);
 private:
   Key keyM;
   Datum datumM;
@@ -39,6 +40,7 @@ private:
 
   // This ctor should be convenient in insert and copy operations.
   Node(const Key& keyA, const Datum& datumA, Node *nextA);
+  
 };
 
 class DictionaryList {
@@ -100,7 +102,7 @@ public:
   void make_empty();
   // PROMISES: size() == 0.
   Mystring operator [] (const int index) const;
-  friend ostream& operator << (ostream& out, const DictionaryList& in);
+  friend ostream& operator << (ostream& out, const DictionaryList& diList);
 private:
   int sizeM;
   Node *headM;

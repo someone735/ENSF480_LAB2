@@ -220,29 +220,32 @@ void DictionaryList::copy(const DictionaryList& source)
 
 Mystring DictionaryList::operator [] (const int index) const
 {
+  int loc = index;
   if (index == 0){
-    return this->cursor_datum();
-  } else {
-    Node* temp = this->headM;
-    while (temp->nextM != nullptr){
-      if (index == 0){
-        return temp->datumM;
-      } else {
-        temp = temp ->nextM;
-      }
+    return this->headM->datumM;
+  }  
+  Node* temp = this->headM;
+  while (temp->nextM != nullptr){
+    if (loc == 0){
+      break;
+    } else {
+      temp = temp->nextM;
+      loc = loc - 1;
     }
-  return "0";
-}
+  }
+  return temp->datumM;;
 }
 
-ostream& operator << (ostream& out, const DictionaryList& in) {
-  Node* temp = in.headM;
-  for (int i = 0; i < in.sizeM; i++)
+ostream& operator << (ostream& out, const DictionaryList& diList) {
+  Node* temp = diList.headM;
+  for (int i = 0; i < diList.sizeM-1; i++)
   {
-    int outInt = in.cursor_key();
-    Mystring outStr = in.cursor_datum();
-    cout << in.cursor_key() << "  " <<in.cursor_datum();
-    
+    if (temp->nextM == nullptr){
+      break;
+    }
+    // cout << temp->keyM << endl;
+    cout << temp->keyM << "  " <<temp->datumM.c_str() << endl;
+    temp = temp-> nextM;
   }
-  
+  return out << temp->keyM << "  " <<temp->datumM.c_str() << endl;
 }

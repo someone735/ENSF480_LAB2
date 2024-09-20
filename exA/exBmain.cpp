@@ -20,7 +20,7 @@ int main()
 {
   DictionaryList dl = dictionary_tests();
  
-  test_copying();
+//   test_copying();
     
  // Uncomment the call to test_copying when DictionaryList::copy is properly defined
  // test_finding(dl);
@@ -157,6 +157,7 @@ void test_operator_overloading(DictionaryList& dl)
 {
 
     DictionaryList dl2 = dl;
+    cout << "size " << dl2.size() << endl; 
     dl.go_to_first();
     dl.step_fwd();
     dl2.go_to_first();
@@ -169,7 +170,7 @@ void test_operator_overloading(DictionaryList& dl)
     else
        cout << endl << dl2.cursor_datum() << " is greater than " << dl.cursor_datum();
     
-#if 1
+// #if 1
     // Needs to overload <= for Mystring
     if(dl.cursor_datum() <= (dl2.cursor_datum()))
         cout << dl.cursor_datum() << " is less than or equal" << dl2.cursor_datum();
@@ -203,7 +204,6 @@ void test_operator_overloading(DictionaryList& dl)
     dl.cursor_datum()[1] = 'o';
     c = dl.cursor_datum()[1];
     cout << endl << "The socond element of "  << dl.cursor_datum() << " is: " << c;
-
     cout << endl << "\nUsing << to display key/datum pairs in a Dictionary list: \n";
     /* The following line is expected to display the content of the linked list 
      * dl2 -- key/datum pairs. It should display:
@@ -215,6 +215,7 @@ void test_operator_overloading(DictionaryList& dl)
     cout << dl2;
  
     cout << endl << "\nUsing [] to display the datum only: \n";
+    #if 1
     /* The following line is expected to display the content of the linked list
      * dl2 -- datum. It should display:
      *   Allen
