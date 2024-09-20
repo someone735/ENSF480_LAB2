@@ -1,20 +1,14 @@
 #ifndef POINT_H
 #define POINT_H
 
-class point
+class Point
 {
 private:
-    /* data */
+    float x;
+    float y;
+    int id;
 public:
-    point(/* args */);
-    ~point();
+    Point(const int x, const int y);
+    ~Point();
 };
-
-point::point(/* args */)
-{
-}
-
-point::~point()
-{
-}
 #endif
