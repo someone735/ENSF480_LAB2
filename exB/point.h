@@ -10,5 +10,10 @@ private:
 public:
     Point(const int x, const int y);
     ~Point();
+    void get_x()const;
+    void get_y()const;
+    int set_x(const int a);
+    int set_y(const int b);
+
 };
 #endif
