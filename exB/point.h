@@ -8,12 +8,18 @@ private:
     float y;
     int id;
 public:
-    Point(const int x, const int y);
+    Point(const double x, const double y);
     ~Point();
-    void get_x()const;
-    void get_y()const;
-    int set_x(const int a);
-    int set_y(const int b);
+    int get_x()const;
+    int get_y()const;
+    void set_x(const int a);
+    void set_y(const int b);
+    int get_id()const;
+
+    void display();
+    
+    double distance_from(const Point& a);
+    static double distance_from();
 
     
 };
