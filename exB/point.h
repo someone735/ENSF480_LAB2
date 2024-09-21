@@ -4,22 +4,24 @@
 class Point
 {
 private:
-    float x;
-    float y;
-    int id;
+    double x;
+    double y;
+    static int id;
 public:
     Point(const double x, const double y);
     ~Point();
-    int get_x()const;
-    int get_y()const;
-    void set_x(const int a);
-    void set_y(const int b);
-    int get_id()const;
+    int getx()const;
+    int gety()const;
+    void setx(const double a);
+    void sety(const double b);
+    int getid()const;
 
     void display();
     
-    double distance_from(const Point& a);
-    static double distance_from();
+    double distance(const Point& a);
+    static double distance(const Point& a, const Point& b);
+
+    int counter()const;
 
     
 };

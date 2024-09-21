@@ -1,8 +1,12 @@
 #include "graphicsWorld.h"
+#include <iostream>
+using namespace std;
+
 
 void GraphicsWorld::run(){
-#if 0 // Change 0 to 1 to test Point
+#if 1 // Change 0 to 1 to test Point
     Point m (6, 8);
+    // cout << m.counter() << endl;
     Point n (6,8);
     n.setx(9);
     cout << "\nExpected to dispaly the distance between m and n is: 3";
@@ -10,6 +14,8 @@ void GraphicsWorld::run(){
     cout << "\nExpected second version of the distance function also print: 3";
     cout << "\nThe distance between m and n is again: "
     << Point::distance(m, n);
+    // cout <<endl << m.getid() << " " << n.getid() << endl; 
+    // cout << m.counter() << " " << n.counter();
 #endif // end of block to test Point
 #if 0 // Change 0 to 1 to test Square
     cout << "\n\nTesting Functions in class Square:" <<endl;
@@ -60,5 +66,4 @@ void GraphicsWorld::run(){
     sh [2]->display();
     sh [3]->display();
 #endif // end of block to test array of pointer and polymorphism
-
-run();
+}
