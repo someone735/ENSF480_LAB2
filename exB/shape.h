@@ -8,9 +8,9 @@ private:
     char* shapeName;
 
 public:
-    Shape(const Point& origin, const char* shapeName);
+    Shape(const double x, const double, const char* shapeName);
     ~Shape(); //remember to program deallocate shape name
-    Point getOrigin()const;
+    const Point& getOrigin()const;
     char* getName()const;
 
     void display();
