@@ -17,7 +17,7 @@ void GraphicsWorld::run(){
     // cout <<endl << m.getid() << " " << n.getid() << endl; 
     // cout << m.counter() << " " << n.counter();
 #endif // end of block to test Point
-#if 0 // Change 0 to 1 to test Square
+#if 1 // Change 0 to 1 to test Square
     cout << "\n\nTesting Functions in class Square:" <<endl;
     Square s(5, 7, 12, "SQUARE - S");
     s.display();

@@ -7,17 +7,18 @@ private:
     double side_b;
 
 public:
-    Rectangle(const double x, const double y, const char* shapeName, const double side_a, const double side_b);
+    Rectangle(const double x, const double y, const double side_a, const double side_b, const char* shapeName);
     ~Rectangle(); //remember to program deallocate shape name
    double area() const;
    double perimeter() const;
 //    Point getOrigin() const;
 //    char* getName() const;
-   double getSideA() const;
+   double getSideB() const;
+
    
 //    void setOrigin(const double x, const double y );
 //    void setName(const char* name); 
-    void setSideA(const double side);
+    void setSideB(const double side);
 
     void display();
 

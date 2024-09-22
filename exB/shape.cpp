@@ -1,6 +1,7 @@
 #include <iostream>
 # include <stdio.h>
 # include <math.h>
+#include <string.h>
 #include "shape.h"
 #include "point.h"
 using namespace std;

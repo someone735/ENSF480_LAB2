@@ -1,8 +1,8 @@
 #include <iostream>
-# include <stdio.h>
 # include <math.h>
+# include <string.h>
 #include "square.h"
-#include "shape.h"
+// #include "shape.h"
 
 using namespace std;
 
@@ -36,6 +36,9 @@ void Square::setSideA(const double side){
     this -> side_a = side;
 }
 
-void Sqaure::display(){
-    cout << "0";
+void Square::display(){
+    Shape::display();
+    cout << "Side a: " << getSideA() << endl;
+    cout << "Area: " << area() << endl;
+    cout << "Perimeter: " << perimeter() << endl; 
 }
