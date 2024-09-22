@@ -27,6 +27,9 @@ void Shape::display() {
     << "Y-coordinate: " << origin.gety() << endl;
 }
 
-double Shape::distance(){
-    
+double Shape::distance(Shape& other){
+    float x1 = pow( getx() - a.getx(), 2);
+    float y2 = pow(this-> gety() - a.gety(), 2);
+    double res = sqrt(x1 + y2);
+    return res;
 }
