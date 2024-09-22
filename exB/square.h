@@ -7,7 +7,7 @@ private:
     double side_a;
 
 public:
-    Square(const double x, const double y, const char* shapeName, const double side_a);
+    Square(const double x, const double y, const double side_a, const char* shapeName,);
     ~Square(); //remember to program deallocate shape name
    double area() const;
    double perimeter() const;
