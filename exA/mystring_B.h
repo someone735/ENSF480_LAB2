@@ -1,3 +1,10 @@
+/*
+File name: mystring_B.h
+Assignment: Lab 2 Excerise A
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 /* File: mystring_B.h
  *
  *

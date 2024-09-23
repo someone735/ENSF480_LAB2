@@ -1,3 +1,10 @@
+/*
+File name: point.cpp
+Assignment: Lab 2 Excerise B
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 #include "point.h"
 #include <iostream>
 # include <stdio.h>

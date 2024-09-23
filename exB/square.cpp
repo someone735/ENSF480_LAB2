@@ -1,3 +1,10 @@
+/*
+File name: square.cpp
+Assignment: Lab 2 Excerise B
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 #include <iostream>
 # include <math.h>
 # include <string.h>

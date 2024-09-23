@@ -1,3 +1,10 @@
+/*
+File name: dictionaryList.h
+Assignment: Lab 2 Excerise A
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 // dictionaryList.h
 // ENSF 480 - Lab 2 - Exercise A
 

@@ -1,3 +1,10 @@
+/*
+File name: rectangle.cpp
+Assignment: Lab 2 Excerise B
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 #include <iostream>
 # include <stdio.h>
 # include <math.h>

@@ -1,8 +1,16 @@
+/*
+File name: dictionaryList.cpp
+Assignment: Lab 2 Excerise A
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
+
 // lookuptable.cpp
 
 // ENSF 480 - Lab 2 - Exercise A
  
-// Completed by:
+// Completed by: John Tumacder
 
 #include <assert.h>
 #include <iostream>
