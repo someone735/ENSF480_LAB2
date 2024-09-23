@@ -214,6 +214,8 @@ void DictionaryList::destroy()
 void DictionaryList::copy(const DictionaryList& source)
 {
   headM = 0;
+  sizeM = 0;
+  cursorM = 0;
   this->sizeM = source.sizeM;
   for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
     this -> insert(temp -> keyM, temp -> datumM);
