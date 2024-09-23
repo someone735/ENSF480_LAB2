@@ -164,7 +164,6 @@ void test_operator_overloading(DictionaryList& dl)
 {
 
     DictionaryList dl2 = dl;
-    cout << "size " << dl2.size() << endl; 
     dl.go_to_first();
     dl.step_fwd();
     dl2.go_to_first();

@@ -213,13 +213,25 @@ void DictionaryList::destroy()
 
 void DictionaryList::copy(const DictionaryList& source)
 {
-  headM = 0;
-  sizeM = 0;
-  cursorM = 0;
-  this->sizeM = source.sizeM;
-  for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
+  // this-> make_empty();
+  this -> headM = 0;
+  this -> sizeM = 0;
+  this -> cursorM = 0;
+  this->headM = source.headM;
+  // this->sizeM = source.sizeM;
+
+  for (Node* temp = source.headM; temp != nullptr; temp = temp->nextM){
+    // cout << temp->keyM <<endl; 
     this -> insert(temp -> keyM, temp -> datumM);
+    sizeM++;
   }
+  // Node* temp = source.headM;
+  // for (int i = 0; i < sizeM; i++)
+  // {
+  //   insert(temp->keyM, temp->datumM);
+  //   temp = temp->nextM;
+  // }
+  
   if (source.cursorM != 0 ){
     find(source.cursorM -> keyM);
   } else {
