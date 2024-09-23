@@ -23,8 +23,8 @@ void GraphicsWorld::run(){
     cout << "\nExpected second version of the distance function also print: 3";
     cout << "\nThe distance between m and n is again: "
     << Point::distance(m, n);
-    cout <<endl << m.getid() << " " << n.getid() << endl; 
-    cout << m.counter() << " " << n.counter();
+    // cout <<endl << m.getid() << " " << n.getid() << endl; 
+    // cout << m.counter() << " " << n.counter();
 #endif // end of block to test Point
 #if 1 // Change 0 to 1 to test Square
     cout << "\n\nTesting Functions in class Square:" <<endl;
