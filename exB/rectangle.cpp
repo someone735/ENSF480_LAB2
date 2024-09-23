@@ -9,6 +9,20 @@ Rectangle::Rectangle(const double x, const double y, const double side_a, const 
     this -> side_b = side_b;
 }
 
+Rectangle::Rectangle(const Rectangle& temp)
+    : Square(temp.getOrigin().getx(), temp.getOrigin().gety(), temp.getSideA(), temp.getName())
+{
+    this -> side_b = temp.getSideB();
+}
+
+Rectangle& Rectangle::operator=(const Rectangle& temp){
+    if (this != &temp){
+        this -> side_b = temp.getSideB();
+        Square::operator=(temp);
+    }
+    return *this;
+}
+
 Rectangle::~Rectangle(){}
 
 double Rectangle::area() const{
@@ -25,12 +39,18 @@ double Rectangle::getSideB() const {
     return this -> side_b;
 }
 
-void Rectangle::setSideB(const double side){
+void Rectangle::set_side_a(const double side){
+    Square::setSideA(side);
+}
+
+void Rectangle::set_side_b(const double side){
     this -> side_b = side;
 }
 
 void Rectangle::display(){
     Shape::display();
-    cout << "Side a: " << Square::getSideA() << endl;
-    cout << "Side b: " << getSideA() << endl;
+    cout << "Side a: " << Square::getSideA() << endl
+    << "Side b: " << getSideB() << endl 
+    << "Area: " << area() << endl
+    << "Perimeter: " << perimeter() << endl;
 }

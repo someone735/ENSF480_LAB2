@@ -9,6 +9,8 @@ private:
 public:
     Square(const double x, const double y, const double side_a, const char* shapeName);
     ~Square(); //remember to program deallocate shape name
+   Square& operator=(const Square& temp);
+   
    double area() const;
    double perimeter() const;
    Point getOrigin() const;

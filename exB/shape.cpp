@@ -16,6 +16,13 @@ Shape::~Shape(){
     delete this->shapeName; 
 }
 
+Shape& Shape::operator=(const Shape& temp){
+    this->origin.setx(temp.getOrigin().getx());
+    this->origin.sety(temp.getOrigin().gety());
+    this-> setName(temp.getName());
+    return *this;
+}
+
 const Point& Shape::getOrigin() const {
     return origin;
 }
@@ -24,10 +31,24 @@ char* Shape::getName() const {
     return shapeName;
 }
 
+void Shape::setName(const char* name){
+    delete this -> shapeName;
+    this->shapeName = new char[strlen(name)+1];
+    strcpy(this->shapeName, name);
+}
+
+void Shape::setx(const double a){
+    this->origin.setx(a);
+}
+
+void Shape::sety(const double b){
+    this->origin.sety(b);
+}
+
 void Shape::display() {
     cout << "Shape Name: " << getName() << endl
-    << "X-coordinate: " << origin.getx() << endl
-    << "Y-coordinate: " << origin.gety() << endl;
+    << "X-coordinate: " << this->origin.getx() << endl
+    << "Y-coordinate: " << this->origin.gety() << endl;
 }
 
 double Shape::distance(Shape& other){

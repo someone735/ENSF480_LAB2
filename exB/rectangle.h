@@ -8,6 +8,8 @@ private:
 
 public:
     Rectangle(const double x, const double y, const double side_a, const double side_b, const char* shapeName);
+    Rectangle(const Rectangle& temp);
+    Rectangle& operator= (const Rectangle& temp);
     ~Rectangle(); //remember to program deallocate shape name
    double area() const;
    double perimeter() const;
@@ -18,7 +20,8 @@ public:
    
 //    void setOrigin(const double x, const double y );
 //    void setName(const char* name); 
-    void setSideB(const double side);
+    void set_side_a(const double side);
+    void set_side_b(const double side);
 
     void display();
 

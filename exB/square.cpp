@@ -12,6 +12,14 @@ Square::Square(const double x, const double y,const double side_a, const char* s
 
 Square::~Square(){} //shapeName is already deallocated in shape
 
+
+Square& Square::operator= (const Square& temp){
+    if (this != &temp){
+        this -> side_a = temp.getSideA();
+        Shape::operator=(temp);
+    }
+    return *this;
+}
 double Square::area() const{
     return pow(side_a,2);
 }

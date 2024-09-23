@@ -22,7 +22,7 @@ void GraphicsWorld::run(){
     Square s(5, 7, 12, "SQUARE - S");
     s.display();
 #endif // end of block to test Square
-#if 0 // Change 0 to 1 to test Rectangle
+#if 1 // Change 0 to 1 to test Rectangle
     cout << "\nTesting Functions in class Rectangle:";
     Rectangle a(5, 7, 12, 15, "RECTANGLE A");
     a.display();
@@ -54,7 +54,7 @@ void GraphicsWorld::run(){
     cout << "\nIf it doesn't there is a problem with your assignment operator.\n" << endl;
     rec3.display();
 #endif // end of block to test Rectangle
-#if 0 // Change 0 to 1 to test using array of pointer and polymorphism
+#if 1 // Change 0 to 1 to test using array of pointer and polymorphism
     cout << "\nTesting array of pointers and polymorphism:" <<endl;
     Shape* sh[4];
     sh[0] = &s;

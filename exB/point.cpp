@@ -28,7 +28,7 @@ void Point::setx(const double a){
     this->x = a;
 };
 void Point::sety(const double b){
-    this->x = b;
+    this->y = b;
 };
 int Point::getid() const{ // **needs fix**
     return this->id;
