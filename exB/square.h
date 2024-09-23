@@ -1,3 +1,10 @@
+/*
+File name: square.h
+Assignment: Lab 2 Excerise B
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 #ifndef SQUARE_H
 #define SQUARE_H
 #include "shape.h"

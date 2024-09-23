@@ -1,3 +1,10 @@
+/*
+File name: shape.h
+Assignment: Lab 2 Excerise B
+Completed by: John Tumacder 
+Submission date: Sept 23, 2024
+*/
+
 #ifndef SHAPE_H
 #define SHAPE_H
 #include "point.h"
