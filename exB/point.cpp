@@ -4,13 +4,13 @@
 # include <math.h>
 using namespace std;
 
-int Point::id = 1000;
+int Point::globalID = 1000;
 
 Point::Point(const double x, const double y)
 {
     this->x = x;
     this->y = y;
-    this->id = ++id;
+    this->id = ++globalID;
     // cout << this-> id << endl;
 }
 
@@ -52,6 +52,6 @@ double Point::distance(const Point& a, const Point& b){
 };
 
 int Point::counter() const{
-    return id - 1000;
+    return globalID - 1000;
 }
 

@@ -6,7 +6,8 @@ class Point
 private:
     double x;
     double y;
-    static int id;
+    int id;
+    static int globalID;
 public:
     Point(const double x, const double y);
     ~Point();
